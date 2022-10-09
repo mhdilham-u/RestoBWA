@@ -1,0 +1,606 @@
+/* =========== Import Font ===========*/
+@font-face {
+    font-family: "Poppins";
+    src: url('font/Poppins-Regular.ttf'), format('truetype');
+}
+
+
+/* =========== Basic ===========*/
+:root {
+    --primaryColor: #5a4fcf;
+    --secondaryColor: #fdc886;
+    --fontColor: #232631;
+    --fontParagrafColor: #656565;
+    --starColor: #ffb800;
+    --buttonLocation: #F2F2F2;
+    --backgroundIconShield: #FFF7ED;
+}
+
+::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========== Master Class ===========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+img[src$=".jpg"] {
+    border-radius: 24px;
+}
+
+.main-container {
+    padding: 0 60px;
+    overflow-x: hidden;
+}
+
+.btn-master {
+    border-radius: 12px;
+    padding: 16px 28px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    border-radius: 24px;
+    border: none;
+    padding: 24px;
+}
+
+
+/* =========== Navbar Section ===========*/
+header {
+    padding: 60px;
+}
+
+.navbar .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--fontColor);
+    padding: 0;
+}
+
+.navbar .nav-item {
+    margin-right: 30px;
+}
+
+.navbar .nav-item .nav-link:hover::after {
+    content: "";
+    display: block;
+    border: 1px solid var(--primaryColor);
+    border-radius: 2px;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.navbar .nav-item .nav-link.satu::after {
+    content: "";
+    display: block;
+    border: 1px solid var(--primaryColor);
+    border-radius: 2px;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.navbar,
+.navbar-expand-lg {
+    padding: 0;
+}
+
+.btn-login,
+.btn-login:hover {
+    color: var(--primaryColor);
+    background-color: rgba(90, 79, 207, 10%);
+}
+
+.form-search {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+input[type="search"]:focus {
+    outline: none;
+}
+
+.btn-search {
+    border: 0;
+    background-color: white !important;
+    border-radius: 12px;
+    padding-left: 28px;
+}
+
+.btn-search img {
+    width: 20px;
+}
+
+.search {
+    position: relative;
+    width: 322px;
+    padding: 16px 28px 16px 5px;
+    border-radius: 12px;
+    border: none;
+    background-color: white;
+}
+
+
+/* =========== Hero Section ===========*/
+.hero {
+    overflow-x: auto;
+}
+
+.hero-details {
+    position: relative;
+}
+
+.hero .hero-details .hero-image img {
+    margin-left: 80px;
+    margin-right: 40px;
+    border-radius: 24px;
+}
+
+.card-hero {
+    top: 133px;
+    position: absolute;
+    width: 390px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-rating-stars>img {
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+.card-rating-stars p:nth-last-child(2) {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--starColor);
+    margin-right: 4px;
+}
+
+.card-rating-stars p:nth-last-child(1) {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fontParagrafColor);
+}
+
+.card-title-hero {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.card-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fontParagrafColor);
+    margin-bottom: 6px;
+}
+
+.card-location {
+    display: flex;
+}
+
+.card-location-wrapper {
+    margin-bottom: 36px;
+}
+
+.card-location img {
+    margin-right: 6px;
+    height: 20px;
+}
+
+.card-location p {
+    color: var(--fontParagrafColor);
+}
+
+.btn-main {
+    color: var(--fontColor);
+    background-color: var(--secondaryColor);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 28px;
+    border-radius: 12px;
+    border: none;
+}
+
+.btn-main:hover,
+.btn-main:link {
+    color: var(--fontColor);
+    background-color: var(--secondaryColor);
+}
+
+.btn-main img {
+    margin-left: 10px;
+    transform: rotate(-90deg);
+    color: var(--fontColor);
+    margin-top: -1px;
+}
+
+.card-info {
+    display: flex;
+    margin-top: 14px;
+}
+
+.card-info img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.card-info p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fontParagrafColor);
+}
+
+
+/* =========== Why Us? Section ===========*/
+.why-us {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+}
+
+.title-text {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--fontColor);
+    margin-top: 6px;
+}
+
+.why-us .row {
+    justify-content: center;
+}
+
+.why-us .row:first-child {
+    margin-bottom: 41px;
+}
+
+.why-us .row .col-2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: rgba(253, 200, 134, 15%);
+}
+
+.why-us .row .col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 24px 24px 0;
+    width: 315px;
+    height: 342px;
+    border-radius: 24px;
+}
+
+.why-us .row .col-2:first-child .btn-view-details {
+    background-color: var(--secondaryColor);
+}
+
+.why-us .row .col-2:hover>a.btn-view-details {
+    background-color: var(--secondaryColor);
+}
+
+.why-us .row .col-2:nth-child(2) {
+    margin: 0 20px;
+}
+
+.why-us .row .col-2:nth-child(3) {
+    margin-right: 20px;
+}
+
+.why-us .card-why-us-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fontColor);
+    margin: 24px 0 12px;
+}
+
+.why-us .row .col-2 p:nth-child(3) {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fontParagrafColor);
+    margin-bottom: 54px;
+}
+
+.why-us .row .col-2 .btn-view-details {
+    width: 315px;
+    height: 72px;
+    text-decoration: none;
+    color: var(--fontColor);
+    font-size: 16px;
+    font-weight: 600;
+    vertical-align: middle !important;
+    border-radius: 12px 12px 24px 24px;
+    padding: 24px;
+}
+
+.why-us .row .col-2 .btn-view-details img {
+    margin-left: 10px;
+    transform: rotate(-90deg);
+    color: var(--fontColor);
+    margin-top: -1px;
+}
+
+
+/* =========== Top Restaurant Section ===========*/
+.top-restaurants {
+    margin-top: 120px;
+}
+
+.top-restaurants .row {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.top-restaurants .row .wrapper-details {
+    height: 300px;
+    overflow-y: hidden;
+    padding: 0;
+}
+
+.top-restaurants .row .wrapper-details p:nth-child(3) {
+    margin: 20px 0 56px;
+    width: 350px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fontParagrafColor);
+}
+
+.btn-arrow-right {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--secondaryColor);
+}
+
+.card-top-restaurants {
+    width: 352px;
+    position: absolute;
+    margin-left: 24px;
+    margin-top: 318px;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.top-restaurants .row .col-8 img:nth-child(3) {
+    margin: 0 20px;
+}
+
+.top-restaurants .row .col-8 {
+    display: flex;
+    justify-content: end;
+    margin-right: auto !important;
+    padding: 0;
+}
+
+
+/* =========== Restaurant Near You Section ===========*/
+.restaurant-near-you {
+    margin-top: 120px;
+    position: relative;
+}
+
+.restaurant-near-you .btn-location {
+    padding: 20px 24px;
+    background-color: var(--buttonLocation);
+    text-decoration: none;
+    color: var(--fontParagrafColor);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant-near-you .btn-location img:first-child {
+    margin-right: 9.5px;
+}
+
+.restaurant-near-you .btn-location img:last-child {
+    margin-left: 8px;
+}
+
+.restaurant-near-you .row:first-child {
+    margin-bottom: 34px;
+}
+
+.card-restaurant-near-you {
+    width: 379px;
+    position: absolute;
+    margin-left: 24px;
+    margin-top: 246px;
+}
+
+.restaurant-near-you .d-flex .position-relative:nth-child(2) {
+    padding: 0 20px;
+}
+
+.restaurant-near-you .text-center {
+    margin-top: 56px;
+}
+
+
+/* =========== Expert Chef Section ===========*/
+.expert-chef {
+    margin-top: 120px;
+    height: 971px;
+}
+
+.expert-chef a.btn-main {
+    margin-top: 62px;
+}
+
+.expert-chef .chef-experience div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--backgroundIconShield);
+    border-radius: 100%;
+    margin-bottom: 12px;
+}
+
+.expert-chef .chef-experience {
+    background-color: white;
+    text-align: center;
+    padding: 30px 46px;
+    width: 179px;
+    height: 203px;
+    border-radius: 24px;
+    position: absolute;
+    top: 40px;
+    left: 481px;
+}
+
+.card-text-chef {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fontParagrafColor);
+}
+
+.expert-chef .img-master-chef {
+    margin-left: 60px;
+}
+
+.chef-at-restaurant {
+    display: flex;
+    position: absolute;
+    padding: 24px;
+    background-color: white;
+    border-radius: 24px;
+    align-items: center;
+    bottom: 40px;
+    left: 0px;
+}
+
+.chef-at-restaurant .card-title-master-chef {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 4px 0 24px;
+}
+
+.chef-at-restaurant img:first-child {
+    border-radius: 12px;
+    margin-right: 12px;
+}
+
+.chef-at-restaurant a svg,
+.card-expert-chef a svg {
+    border-radius: 12px;
+    margin-right: 0;
+    transform: rotate(-90deg);
+    margin-left: 10px;
+}
+
+.chef-at-restaurant a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondaryColor);
+    text-decoration: none;
+}
+
+.card-expert-chef a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondaryColor);
+    text-decoration: none;
+}
+
+.card-expert-chef {
+    width: 596px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+.card-expert-chef:nth-child(2) {
+    background-color: white;
+}
+
+.card-expert-chef:nth-child(2) .profile-details {
+    display: block;
+}
+
+.card-expert-chef:nth-child(2) .icon-location {
+    fill: var(--fontParagrafColor);
+}
+
+.card-expert-chef .profile-details {
+    display: none;
+}
+
+.card-expert-chef:hover {
+    background-color: white;
+}
+
+.card-expert-chef:hover>.profile-details {
+    display: block;
+}
+
+.card-expert-chef:hover .icon-location {
+    fill: var(--fontParagrafColor);
+}
+
+.card-expert-chef .card-title-chef {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 6px 0;
+}
+
+.wrapper-title-expert-chef {
+    margin-bottom: 32px;
+}
